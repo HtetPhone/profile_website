@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import "../node_modules/animate.css/animate.min.css";
+
+:root {
+    --primary: #3586dd;
+    /* --secondary :  */
+    --transition : 0.3s ease;
+    --bg-color : #7E76F915;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {overflow-x: hidden;}
+
+/* header navbar start */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    transition: var(--transition);
+}
+/* header sticky  */
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+
+    }
+    .sticky .nav-link{color: #000;}
+/* header sticky  */
+
+.navbar-brand span{
+    color: cyan;
+    text-shadow: 1.5px 1.5px grey;
+    font-size: 30px;
+    font-family: 'Rock Salt', cursive;
+}
+.logo {
+    width: 40px;
+    transform: scaleX(-1);
+}
+    /* collapse btn  */
+    .navbar-toggler{
+        border: 1px solid #000;
+    }
+
+    /* nav menu  */
+    .nav-item {
+        margin: 0 18px;
+        border-bottom: 2.5px solid transparent;
+        transition: var(--transition);  
+    }
+    .nav-link {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 1.2px;
+    }
+    .nav-item.active, .nav-item.active .nav-link{
+        border-color: cyan;
+        color:  cyan;
+    }
+    .nav-item:hover, .nav-item:hover .nav-link {
+        border-bottom-color: cyan;
+        color: cyan;
+    }
+/* header navbar ends */
+
+/* home starts  */
+.home {
+    background-image: url('../img/home-bg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+    min-height: 100vh;
+    padding:  100px;
+    position: relative;
+    /* to control children  */
+    gap: 4rem;
+}
+.home-text h1 {text-shadow: 1.5px 1.5px grey;}
+.home-img img, .about-img img{
+    max-width: 420px;
+    
+}
+.bumpy {
+    bottom: 1%;
+    /* left: 0; */
+}
+.bumpy-btn {
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 5px;
+    border-radius: 28px;
+    transition: var(--transition);
+}
+.bumpy-btn:hover {
+    border-color: #3586dd;
+}
+/* home ends  */
+
+
+/* about starts */
+.about {
+    gap: 4rem;
+    background: var(--bg-color);
+    padding: 70px 20px;
+}
+.about-text {
+    max-width: 350px;
+}
+.about-text p {
+    word-wrap: break-word;
+}
+/* about ends */
+
+
+/* sservice starts */
+.service {
+    padding: 10rem 0;
+    background-image: url('../img/bg-2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom ;
+}
+.service-header {
+    text-align: center;
+}
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    /* align-content: center; */
+    /* place-items: center; */
+    gap: 1rem;
+    grid-row-gap: 3rem;
+}
+.service-cards .card {transition: var(--transition);}
+.service-cards .card:hover {
+    transform: scale3d(1.02,1.02,1);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.service-icon {
+    width: 70px;
+}
+.my-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.service-btn {
+    margin-top: auto;
+}
+
+/* service ends */
+
+/* pricing starts */
+.pricing {padding: 80px 0; background-color: var(--bg-color);}
+.pricing-text { text-align: center;}
+
+.pricing-carousel .card{
+    /* height: 350px; */
+    padding: 50px 0;
+    margin: 0 18px;
+    
+}
+    /* slick edit */
+    .slick-dots{
+        display: flex;
+        justify-content: center!important;
+        align-items: center!important;
+    }
+    .slick-dots li{
+        width: 7px!important;
+        height: 7px!important;
+        border-radius: 50%;
+        transition: var(--transition);
+        background-color: rgba(128, 128, 128, 0.293);
+        border: 0px!important;
+        border-radius: 50%!important;
+    }
+    .slick-dots li.slick-active {
+        width: 7px!important;
+        height: 7px!important;
+        padding: 3px;
+        background-color: rgb(39, 102, 102);
+    }
+    .slick-dots li:hover{
+        background-color: #00006f;
+    }
+/* pricing ends */
+
+
+/* contact starts */
+/* .contact{background-color: rgba(185, 181, 181, 0.346); } */
+.contact-text {text-align: center;}
+
+.contact-block > .row {gap: 2rem}
+    /* map  */
+    .map {
+        height: 400px;
+        flex-grow: 3;
+        border-radius: 8px;
+    }
+/* contact ends */
+
+
+/* footer starts */
+.footer {
+    background-color: grey;
+    color: #fff;
+    padding: 80px 20px; 
+    background-image: url('../img/wave.svg') ;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    grid-row-gap: 2rem;
+}
+.social-icon {
+    width: 40px;
+    padding: 8px;
+    border: 0.8px solid #000;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+.social-icon:hover {border: 2px solid #000;}
+/* footer ends */
+
+/* finalizing  */
+.home, .about, .service, .pricing, .contact , .footer {overflow-x: hidden;}
+.white-header{
+    background-color: #fff;
+}
+.white-header .nav-link {
+    color: #000;
+}
+
+
+@media (max-width: 982px){
+    /* header  */
+    .header .nav-link {
+        color: #000;
+    }
+    /* service  */
+    .service-header {
+        text-align: center;
+    }
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        grid-row-gap: 2rem;
+    }
+    /* .map {width: 380px;height: 380px;} */
+
+    /* footer  */
+    .footer-info {grid-template-columns: repeat(2, 1fr) ;}
+}
+
+
+
+@media (max-width: 600px){
+    /* header  */
+    .nav-link {
+        color: #000;
+    }
+    /* home  */
+    .home-img img, .about-img img {
+        max-width: 300px;
+    }
+
+    /* service  */
+    .service-header {
+        /* text-indent: 15px; */
+        text-align: center;
+    }
+    .service-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* footer  */
+    .footer-info {grid-template-columns: repeat(2, 1fr) ;}
+}
+
+
+@media (max-width: 450px) {
+    /* footer  */
+    .footer-info {grid-template-columns: repeat(1, 1fr) ;}
+
+}
