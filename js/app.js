@@ -1,3 +1,8 @@
+// loader 
+$(window).on("load", function () {
+  $(".loader-div").fadeOut(500);
+});
+
 // slick
 $('.pricing-carousel').slick({
     infinite: true,

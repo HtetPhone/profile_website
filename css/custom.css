@@ -20,6 +20,20 @@
 
 body {overflow-x: hidden;}
 
+/* loader div  */
+.loader-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 90000000;
+    background: #fff;
+}
+.loader-div img {width: 13%;}
+
 /* header navbar start */
 .header {
     position: absolute;
